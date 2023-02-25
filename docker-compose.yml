@@ -1,0 +1,14 @@
+version: "3"
+services:
+  k0s_master:
+    container_name: k0s_master
+    image: krlsedu/ubuntu_k0s
+    restart: on-failure
+    ports:
+      - "23:22"
+  k0s_worker:
+    container_name: k0s_worker
+    image: krlsedu/ubuntu_k0s
+    restart: on-failure
+    ports:
+      - "24:22"
